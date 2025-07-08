@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api/telegram", "dest": "api/telegram.js" }
+  ]
+}
+
