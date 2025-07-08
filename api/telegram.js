@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
   const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-  const REPO = "astledsa/telegitbot";
+  const REPO = "astledsa/readings";
   const WORKFLOW_ID = "update-link.yml";
 
   const message = req.body?.message?.text || "";
