@@ -39,7 +39,7 @@ jobs:
           URL=$(echo "${{ github.event.inputs.url }}" | sed 's/\//\\\//g')
 
           # Insert before closing curly bracket of the correct JS object
-          sed -i "/let $VAR_NAME *= *{/,/}/ s/}/  \"$TITLE\": \"$URL\",\n}/" "$FILE"
+          sed -i "/let $VAR_NAME *= *{/,/}/ {/}/i\\  \"$TITLE\": \"$URL\",}" "$FILE"
 
       - name: Commit changes
         run: |
